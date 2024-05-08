@@ -1,0 +1,72 @@
+/* Body */
+body {
+    font-family: 'Gill sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ece8e8; 
+    background-color: #06891a; 
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+/* Skip Button */
+#skip {
+    position: absolute;
+    left: -500px;
+    width: 170px; 
+    height: 40px; 
+    background-color: #eaeee8; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: left 0.3s ease; 
+    font-style: italic; 
+    align-self: start;
+    padding-top: 0;
+}
+
+#skip:focus {
+    position: fixed;
+    left: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: #333; 
+    padding: 10px; 
+}
+
+ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline; 
+    margin-right: 40px;
+}
+
+/* Links */
+a {
+    color: white; 
+    text-decoration: none; 
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #e87203;
+    border-radius: 20px;
+}
+
+nav a.active {
+    background-color: #008113;
+    color: #eaeee8;
+}
