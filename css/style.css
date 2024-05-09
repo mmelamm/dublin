@@ -97,15 +97,13 @@ html{
 
 .image-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .image-grid img{
     width: 50%;
-    border: solid blue 2px;
-    border-bottom-right-radius: 15px;
-
-    border-radius: 65% 35% 100% 0% / 0% 100% 0% 100% ;
+    border: solid rgb(239, 239, 241) 2px;
+    border-bottom-right-radius: 100% 0% 100% 0% / 0% 100% 0% 100%;
     
     .invert-filter {
         filter: invert(100%);
@@ -114,9 +112,15 @@ html{
 }
 @media screen and (min-width: 776px){
     .image-grid {
-        grid-template-columns: 35% 35%305;
-        grid-gap: 20px
+        grid-template-columns: 35% 35% 35%;
+        grid-gap: 30px
         /* justify-content: ; */
     }
 
+}
+video{ 
+    width:50%;
+    margin: auto;
+    border: 20px solid black;
+    display: block;
 }
