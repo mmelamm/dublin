@@ -4,7 +4,7 @@ body {
     font-size: 20px;
     line-height: 1.6;
     color: #ece8e8; 
-    background-color: #06891a; 
+    background-color: #569a60; 
 }
 
 /* Headings */
@@ -18,8 +18,8 @@ h1, h2 {
     left: -500px;
     width: 170px; 
     height: 40px; 
-    background-color: #eaeee8; 
-    color: #ffffff; 
+    background-color: #0b2000; 
+    color: #dfdcdc; 
     border: none; 
     border-radius: 5px; 
     font-size: 16px; 
@@ -31,13 +31,14 @@ h1, h2 {
 }
 
 #skip:focus {
-    position: fixed;
-    left: 10px;
+    position: absolute;
+    left: 100px;
+    transition: 1s;
 }
 
 /* Navigation */
 nav {
-    background-color: #333; 
+    background-color: #f9f9f9; 
     padding: 10px; 
 }
 
@@ -54,7 +55,7 @@ li {
 
 /* Links */
 a {
-    color: white; 
+    color: rgb(221, 136, 0); 
     text-decoration: none; 
 }
 
@@ -69,4 +70,53 @@ a:hover {
 nav a.active {
     background-color: #008113;
     color: #eaeee8;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+      		scroll-behavior: auto; /* Disable smooth scrolling */
+    }
+
+    *{
+        	transition: 0s !important;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    nav {
+        background: #ff8800;
+        border: solid 6px #a8bd9d;
+       }
+        nav a {
+               color: #fff;
+    }
+}
+
+.image-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image-grid img{
+    width: 50%;
+    border: solid blue 2px;
+    border-bottom-right-radius: 15px;
+
+    border-radius: 65% 35% 100% 0% / 0% 100% 0% 100% ;
+    
+    .invert-filter {
+        filter: invert(100%);
+    }
+    
+}
+@media screen and (min-width: 776px){
+    .image-grid {
+        grid-template-columns: 35% 35%305;
+        grid-gap: 20px
+        /* justify-content: ; */
+    }
+
 }
