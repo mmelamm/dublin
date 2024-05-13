@@ -37,36 +37,28 @@ h1, h2 {
 
 /* Navigation */
 nav {
-    background-color: #1a5b1c; 
-    padding: 10px; 
+    background-color: #1a5b1c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 ul {
-    list-style-type: none; 
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 li {
-    display: inline; 
+    display: inline;
     margin-right: 40px;
-}
-
-
-
-nav{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-nav a{
-    text-align: right;
 }
 
 /* Links */
 a {
-    color: rgb(221, 136, 0); 
-    text-decoration: none; 
+    color: rgb(221, 136, 0);
+    text-decoration: none;
 }
 
 a:hover {
@@ -125,10 +117,7 @@ html {
         flex-direction: row-reverse;
         flex-wrap: wrap;
     }
-    nav a{
-        width:50px;
-        display: inline-block;;
-    }
+   
 }
 
 /* Video Styles */
@@ -236,5 +225,74 @@ video {
     text-transform: uppercase;
     border-left: 2px solid;
     border-right: 2px solid;
+}
+
+
+
+
+
+/* Navigation */
+nav {
+    background-color: #1a5b1c;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+/* Links */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3c973b;
+}
+
+nav a.active {
+    background-color: #008113;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+.scrollable-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping */
+    width: 100%; /* Set the width of the container */
+}
+
+.scrollable-container img {
+    display: inline-block; /* Display images in a row */
+    max-width: 100%; /* Prevent images from exceeding container width */
+    height: auto; /* Maintain aspect ratio */
 }
 
