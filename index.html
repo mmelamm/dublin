@@ -9,6 +9,7 @@
     <!-- https://www.favicon.cc/ -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>Exploring Ireland: A Study Abroad Journey</title>
+    <link href="dist/css/lightbox.css" rel="stylesheet" />
     <link rel = "stylesheet" href="css/style.css">
     
 </head>
@@ -18,12 +19,12 @@
 <header>
     <h1>Exploring Ireland: A Study Abroad Journey</h1>
     <nav>
-      <a href="index.html">About Us</a>
+      <a href="index.html"class="current">About Us</a>
       <a href="dublin.html">Dublin</a>
       <a href="kilkenny.html">Kilkenny</a>
       <a href="galway.html">Galway</a>
       <a href="cliffs.html">Cliffs of Moher</a>
-      <a href="blog.html" class="current">Blog</a>
+      <a href="blog.html" >Blog</a>
       <a href="glendalough.html">Glendalough</a>
       <a href="gallery.html">Gallery</a>
     
@@ -50,31 +51,39 @@
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 4</div>
-      <img src="images/downtown1.jpeg" alt = "O'Connell Monument">
+
+
+      <a href="images/downtown1.jpeg" data-lightbox="image-1" data-title="My caption">
+        <img src="images/downtown1.jpeg" alt = "O'Connell Monument">
+      </a>
+      
       <div class="text">O'Connell Monument</div>
     </div>
   
     <div class="mySlides fade">
       <div class="numbertext">2 / 4</div>
-      <img src="images/castle.jpeg" alt = "" >
-      <div class="text">Fill in better caption</div>
+
+      <a href="images/castle.jpeg" data-lightbox="image-1" data-title="My caption">
+        <img src="images/castle.jpeg" alt = "better caption">
     </div>
   
     <div class="mySlides fade">
       <div class="numbertext">3 / 4</div>
-      <img src="images/green.jpeg" alt = "" >
-      <div class="text">Fill in better caption</div>
+
+      <a href="images/green.jpeg" data-lightbox="image-1" data-title="My caption">
+        <img src="images/green.jpeg" alt = "">
     </div>
 
     <div class="mySlides fade">
         <div class="numbertext">3 / 4</div>
-        <img src="images/praise.jpeg" alt = "In the Hillsborough church, the memorial honoring Arthur 5th Marquis Downshire (1844–74) features the quartered arms of Hill impaling those of Balfour." >
-        <div class="text">Praise God for all </div>
+        <a href="images/praise.jpeg" data-lightbox="image-1" data-title="In the Hillsborough church, the memorial honoring Arthur 5th Marquis Downshire (1844–74) features the quartered arms of Hill impaling those of Balfour.">
+          <img src="images/praise.jpeg" alt = "">
       </div>
       <div class="mySlides fade">
         <div class="numbertext">3 / 4</div>
-        <img src="images/city1.jpeg" alt = "" >
-        <div class="text">Liberties of Christ Church</div>
+
+        <a href="images/city1.jpeg" data-lightbox="image-1" data-title=".">
+          <img src="images/city1.jpeg" alt = "Liberties of Christ Church">
       </div>
   
     <!-- Next and previous buttons -->
@@ -91,15 +100,6 @@
     <span class="dot" onclick="currentSlide(4)">&#9752; &#65039;</span>
   </div>
 
-
-
-        <!-- <div class="image-grid">
-            <img src="images/animal.jpeg" width = "200" alt="Dublin">
-            <img src="images/castle.jpeg" width = "200" alt="Kilkenny">
-            <img src="images/green.jpeg" width = "200" alt="Galway">
-            <img src="images/soliders.jpeg" width = "200" alt="Cliffs of Moher">
-
-        </div> -->
     </section>
 </main>
 <footer>
@@ -141,29 +141,29 @@ function showSlides(n) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
+
+
+
+
+
+
+
+
+
+<script src="dist/js/lightbox-plus-jquery.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
