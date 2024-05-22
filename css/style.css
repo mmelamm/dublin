@@ -62,6 +62,10 @@ li {
     margin-right: 40px;
 }
 
+article{
+    margin-bottom: 10px;
+}
+
 /* Links */
 a {
     color: #e8eef3(36 15% 70%);
@@ -120,6 +124,33 @@ html {
     scroll-behavior: smooth;
 }
 
+#About h2{
+    line-height: 2em; 
+}
+
+#About h2::after{
+    content: url("../images/shamrock2.png")
+}
+
+#About img{
+    width:75px
+
+}
+.gallery-container{
+    min-height: 450px;
+}
+.galway-gallery img{
+   
+    width:350px;
+    margin: auto;
+    margin-bottom: 250px
+}
+
+
+.galway-gallery img:first-child{
+    z-index: 1;
+}
+   
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto; 
@@ -382,7 +413,7 @@ nav a.active {
  
     .image-grid figure:last-child{
         grid-column: 5/span 2;
-        transform: rotate(-20deg);
+        transform: rotate(-5deg);
 
     }
     /* Why do I not need a rule for image 5?  */
@@ -393,7 +424,11 @@ nav a.active {
 
 
 .image-grid figure:nth-child(even){
-    transform: rotate(-25deg)
+    transform: rotate(-15deg)
+}
+
+.image-grid figure:nth-child(odd){
+    transform: rotate(15deg)
 }
 
 
@@ -421,4 +456,9 @@ nav a.active {
 figcaption {
     text-align: center;
     margin-top: 5px;
+}
+
+
+body .image-grid .straight{
+    transform: rotate(0deg);
 }

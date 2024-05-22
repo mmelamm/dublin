@@ -16,7 +16,8 @@
   }
   
   .accordion:after {
-    content: 'open tab';
+    /* content: 'open tab'; */
+    content: url('../images/shamrock3.png');
     color: #777;
     font-weight: bold;
     float: right;
@@ -35,7 +36,3 @@
     transition: max-height 1s ease-out;
   }
 
-
-  .accordion {
-    
-  }
