@@ -1,26 +1,175 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- https://www.favicon.cc/ -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>Exploring Ireland: A Study Abroad Journey</title>
-    <link rel="stylesheet" href="css/style.css">
-   
+    <link href="dist/css/lightbox.css" rel="stylesheet" />
+    <link rel = "stylesheet" href="css/style.css">
+    
+</head>
 <body>
-    <a href = "#main" id = "skip">Skip to Main Content</a>
-    <header>
-        <h1>Galway</h1>
-        <nav>
-            <a href="index.html" >About Us</a>
-            <a href="dublin.html">Dublin</a>
-            <a href="kilkenny.html">Kilkenny</a>
-            <a href="galway.html" class = "current">Galway</a>
-            <a href="cliffs.html">Cliffs of Moher</a>
-            <a href="blog.html">Blog</a>
-            <a href="gallery.html">Gallery</a>
-        
-        </nav>
-    </header>   
+<a href = "#main" id = "skip">Skip to Main Content</a>
+
+<header>
+    <h1>Exploring Ireland: A Study Abroad Journey</h1>
+    <nav>
+      <a href="index.html">About Me</a>
+      <a href="dublin.html">Dublin</a>
+      <a href="kilkenny.html">Kilkenny</a>
+      <a href="galway.html"class="current">Galway</a>
+      <a href="cliffs.html">Cliffs of Moher</a>
+      <a href="blog.html" >Blog</a>
+      <a href="glendalough.html">Glendalough</a>
+      <a href="gallery.html">Gallery</a>
+    
+    </nav>
+</header>
+
+
+
+        <!-- Slideshow container -->
+        <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="galway-gallery">
+
+      <a href="images/computer_cheers.jpeg" data-lightbox="image-1" data-title="Old Computer">
+        <img src="images/computer_cheers.jpeg" alt = "add text">
+      </a>
+   
+
+      <a href="images/power-glove.jpeg" data-lightbox="galway" data-title="Power Glove">
+        <img src="images/power-glove.jpeg" alt = "better caption">
+    </a>
+    
+
+
+      <a href="images/telephony.jpeg" data-lightbox="galway" data-title="Old Telephone">
+        <img src="images/telephony.jpeg" alt = "add text">
+    </a>
+    
+        <a href="images/fish_chips.jpeg" data-lightbox="galway" data-title="better caption">
+          <img src="images/fish_chips.jpeg" alt = "better caption">
+        </a>
+     
+
+        <a href="images/flags1.jpeg" data-lightbox="galway" data-title="Flags">
+          <img src="images/flags1.jpeg" alt = "better caption">
+        </a>
+     
+        <a href="images/city1.jpeg" data-lightbox="image-1" data-title=".">
+          <img src="images/city1.jpeg" alt = "better caption">
+        </a>
+      
+
+        <a href="images/city_night1.jpeg" data-lightbox="galway"  data-title=".">
+          <img src="images/city_night1.jpeg" alt = "better caption">
+        </a>
+      
+
+        <a href="images/Crave_bar.jpeg" data-lightbox="galway"  data-title=".">
+          <img src="images/Crave_bar.jpeg" alt = "better caption">
+        </a>
+      
+        <a href="images/dunguaire_castle.jpeg" data-lightbox="galway"  data-title=".">
+          <img src="images/dunguaire_castle.jpeg" alt = "better caption">
+        </a>
+      </div>
+    
+
+
+
+
+    </section>
+    <main id = "main">
+        <section id="about">
+            <h2>Galway</h2>
+        <h3>Places to visit</h3>
+        <article> 
+            This city is full of things to do. First, explore Galway's market, which is perfect for supporting local vendors and a great place to purchase souvenirs like Aran sweaters, Claddagh rings, and handcrafted Celtic jewelry. There are many places to visit around the city, such as the Spanish Arch and the vibrant Latin Quarter. Galway's Cathedral is one to explore, with its stunning architecture and rich history. If you don't want to walk much, I recommend taking the bus tour—it's the perfect way to see the whole city, including stops at the Galway City Museum and the Salthill Promenade, where you can enjoy stunning views of Galway Bay.  </article>
+        </section>
+        <h3>Places to Eat</h3>
+        <article> 
+            For dessert or fresh coffee, try out Gourmet Tart Co. They have delicious treats like Oreo cookies and strawberry danishes, as well as traditional Irish pastries like scones and brack. If you want to try an Irish dish, check out McDonagh's for their fish and chips. They also serve other Irish favorites such as seafood chowder and smoked salmon. You can enjoy your meal inside or outside, with no need for reservations. Additionally, don't miss out on trying a full Irish breakfast at a local café, or enjoying a pint of Guinness at one of Galway's historic pubs.</article>
+        <h3> Computer and Communications Museum of Ireland</h3>
+        <article>The Computer and Communications Museum of Ireland, established in 2010, offers visitors an interactive journey through the evolution of technology. Delve into the past to discover how modern technology has evolved, exploring key moments that have shaped Ireland's technological landscape, and celebrating the contributions of Irish inventors and innovators. From the early days of computing to the forefront of modern innovation.
+        </article>
+</main>
+<footer>
+    <p>&copy; 2024 Exploring Ireland: A Study Abroad Journey</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</footer>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<script src="dist/js/lightbox-plus-jquery.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
+
+
+
+
+
+
