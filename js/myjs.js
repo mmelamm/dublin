@@ -5,5 +5,7 @@ function modifyImages(){
 
     for (i = 0; i < images.length; i++) {
     images[i].classList.toggle('straight')
+    images[i].style.animation="none"
+
   }
 }

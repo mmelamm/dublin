@@ -8,6 +8,7 @@ body {
     background-color: #ffffff; 
 }
 
+
 /* Headings */
 h1, h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
@@ -24,13 +25,13 @@ time{
 #skip {
     position: absolute;
     left: -500px;
-    width: 170px; 
+ 
     height: 40px; 
     background-color: #5F6F52; 
     color: #dfdcdc; 
     border: none; 
     border-radius: 5px; 
-    font-size: 16px; 
+    font-size: 24px; 
     cursor: pointer; 
     transition: left 0.3s ease; 
     font-style: italic; 
@@ -50,6 +51,9 @@ nav {
     flex-direction: column;
     position: relative;
 }
+p{
+    padding: 15px;
+}
 
 ul {
     list-style-type: none;
@@ -68,17 +72,17 @@ article{
 
 /* Links */
 a {
-    color: #e8eef3(36 15% 70%);
+    color: blue;
     text-decoration: none;
 }
-
+/* 
 a:hover {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
     background-color: #e1cc96;
     border-radius: 20px;
-}
+} */
 
 nav a.active {
     background-color: #809571;
@@ -155,8 +159,14 @@ html {
     html {
         scroll-behavior: auto; 
     }
+
+    .reduce{
+        display: none;
+    }
    body div.image-grid figure{
         transform: rotate(0deg) !important;
+        animation: none !important;
+
     }
 }
 
@@ -366,12 +376,13 @@ nav a.active {
 .image-grid,.galway-grid{
     margin-top: 50px;
     display: grid;
+    margin:30px;
     grid-template-columns: 1fr;
     padding-bottom: 20px;
  }
  
  /* #did this better  */
- .image-grid figure{
+ .image-grid figure {
     width: 90%;
     border: 5px solid black;
     border-radius:25px;
@@ -386,10 +397,14 @@ nav a.active {
 
 
  .galway-grid img{
+    border:5px solid black;
+    padding: 15px;
     width:90%;
     margin:auto;
     display: block;
  }
+
+
  
  
  @media all and (min-width: 700px){
@@ -412,7 +427,7 @@ nav a.active {
         grid-column: auto / span 2;
     }
     /* Why do I need this next rule? */
-    .image-grid figure:nth-child(3n),.image-grid video:nth-child(3n){
+    .image-grid figure:nth-child(3n),.image-grid video:nth-child(2n){
         grid-column: auto / span 2;
     }
     .image-grid figure:nth-child(4n),.image-grid video:nth-child(4n){
@@ -467,6 +482,42 @@ figcaption {
 }
 
 
-body .image-grid .straight{
+body .image-grid figure.straight{
     transform: rotate(0deg);
+}
+
+@keyframes photomove1 .image-grid {
+    from { left: -250px; 
+        transform: rotate(0deg);}
+    to { left: 10px;transform: rotate(-25deg);}
+  }
+
+  @keyframes photomove2 {
+    from { top: -250px;transform: rotate(0deg);}
+    to { top: 0px; transform: rotate(25deg);}
+  }
+
+  @keyframes photomove3 {
+    from { right: -550px;transform: rotate(0deg);
+   bottom: 300px }
+    to { right: 0px;transform: rotate(360deg);
+    right: 0px}
+  }
+  .image-grid figure:nth-child(even) {
+    transform: rotate(25deg);
+    animation: photomove2 1s;
+
+}
+
+
+.image-grid figure:nth-child(odd) {
+    transform: rotate(-25deg);
+    animation: photomove1 8s;
+}
+
+
+.image-grid figure:nth-child(3n+2) {
+    animation: photomove3 5s;
+    transform: rotate(0deg);
+    position: relative;
 }

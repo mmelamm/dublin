@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -10,167 +8,78 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>Exploring Ireland: A Study Abroad Journey</title>
     <link href="dist/css/lightbox.css" rel="stylesheet" />
-    <link rel = "stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<a href = "#main" id = "skip">Skip to Main Content</a>
+    <a href="#main" id="skip">Skip to Main Content</a>
 
-<header>
-    <h1>Exploring Ireland: A Study Abroad Journey</h1>
-    <nav>
-      <a href="index.html"class="current">About Me</a>
-      <a href="dublin.html">Dublin</a>
-      <a href="kilkenny.html">Kilkenny</a>
-      <a href="galway.html">Galway</a>
-      <a href="cliffs.html">Cliffs of Moher</a>
-      <a href="blog.html" >Blog</a>
-      <a href="glendalough.html">Glendalough</a>
-      <a href="gallery.html">Gallery</a>
-    
-    </nav>
-</header>
+    <header>
+        <h1>Exploring Ireland: A Study Abroad Journey</h1>
+        <nav>
+            <a href="index.html" class="current">About Me</a>
+            <a href="dublin.html">Dublin</a>
+            <a href="kilkenny.html">Kilkenny</a>
+            <a href="galway.html">Galway</a>
+            <a href="cliffs.html">Cliffs of Moher</a>
+            <a href="blog.html">Blog</a>
+            <a href="glendalough.html">Glendalough</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
 
-<main id = "main">
-    <!-- <h2>Failte go Baile Atha Cliath!</h2> -->
-    <section id="Aboutme">
-    <section id="about">
-        <h2>About Us/Me</h2>
+    <main id="main">
+      <button onclick="modifyImages()" class ="reduce">Modify Images</button>
+        <section id="about">
+            <h2>About Us/Me</h2>
+            <h3><i>Dia duit, </i> Melanie<i> is ainm dom</i> <img src="images/shamrock3.png" alt="Shamrock representing Ireland" width="25px"></h3>
+            <p>
+                Hey, come explore Ireland with me! Experience the most beautiful scenic views and the most delicious food around the city. It's my first time in Ireland, and it's definitely worth the trip!
+            </p>
+        </section>
 
-       <h3><i>Dia duit, </i>Melanie<i> is ainm dom</i>  <img src="images/shamrock3.png" alt="Shamrock representing Ireland" width = "25px"></h3> 
-       
-<article>Hey, come explore Ireland with me! Experience the most beatuiful scenic views and the most delicious food around the city. It's my first time in Ireland, and it's definitely worth the trip</article>
+        <section class="image-grid">
+           <figure>
+                <a href="images/castleintheback.jpeg" data-lightbox="image-1" data-title="Check out the castle behind me">
+                    <img src="images/castleintheback.jpeg" alt="Moher Cliffs views">
+                </a>
+              </figure>
 
-
-
-
-        <!-- Slideshow container -->
-        <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-</section>  
- <div class="slideshow-container">
-
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 4</div>
-
-
-      <a href="images/castleintheback.jpeg" data-lightbox="image-1" data-title="My caption">
-        <img src="images/castleintheback.jpeg" alt = "">
-      </a>
-      
-      <div class="text">...me</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 4</div>
-
-      <a href="images/castle.jpeg" data-lightbox="image-1" data-title="My caption">
-        <img src="images/castle.jpeg" alt = "better caption">
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 4</div>
-
-      <a href="images/london.farris.jpeg" data-lightbox="image-1" data-title="My caption">
-        <img src="images/london.farris.jpeg" alt = "">
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">3 / 4</div>
-        <a href="images/ontheboat.jpeg" data-lightbox="image-1" data-title=".">
-          <img src="images/ontheboat.jpeg" alt = "">
-      </div>
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 4</div>
-
-        <a href="images/castleintheback.jpeg" data-lightbox="image-1" data-title=".">
-          <img src="images/castleintheback.jpeg" alt = "....">
-      </div>
-  
-
-  <!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)">&#9752; &#65039;</span>
-    <span class="dot" onclick="currentSlide(2)">&#9752; &#65039;</span>
-    <span class="dot" onclick="currentSlide(3)">&#9752; &#65039;</span>
-    <span class="dot" onclick="currentSlide(4)">&#9752; &#65039;</span>
-    <span class="dot" onclick="currentSlide(4)">&#9752; &#65039;</span>
-    
-  </div>
+           <figure>
+                <a href="images/meandcastle.jpeg" data-lightbox="image-1" data-title="You can the Castle in the background">
+                    <img src="images/meandcastle.jpeg" alt="better caption">
+                </a>
+              </figure>
 
 
+           <figure>
+                <a href="images/london.farris.jpeg" data-lightbox="image-1" data-title="This is me in London">
+                    <img src="images/london.farris.jpeg" alt="The London Eye background">
+                </a>
+              </figure>
 
 
-    </section>
-</main>
-<footer>
-    <p>&copy; 2024 Exploring Ireland: A Study Abroad Journey</p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-</footer>
-
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+           <figure>
+                <a href="images/ontheboat.jpeg" data-lightbox="image-1" data-title="On the on and off bus">
+                    <img src="images/ontheboat.jpeg" alt="Titanic picture">
+                </a>
+              </figure>
 
 
-</script>
+           <figure>
+                <a href="images/background,selfie.jpeg" data-lightbox="image-1" data-title="The selfie ">
+                    <img src="images/castleintheback.jpeg" alt="the selfie ">
+                </a>
+              </figure>
 
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2024 Exploring Ireland: A Study Abroad Journey</p>
+    </footer>
 
-
-
-
-
-
-
-<script src="dist/js/lightbox-plus-jquery.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
+    <script src="js/myjs.js"></script>
 </body>
 </html>
-
-
-
-
-
-
